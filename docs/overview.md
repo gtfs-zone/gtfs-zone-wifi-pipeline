@@ -43,6 +43,11 @@ gtfs-zone-wifi-viz (viz.wifi.gtfs.zone)
 
 - Map of the aggregates
 - "Wifi along this trip" demo of the published data
+- Reads the artifacts from `VITE_DATA_URL` (default
+  `https://data.wifi.gtfs.zone`); the dev server reads the pipeline's test
+  output from `public/fixtures/`
+- Colours bins and stations by `wifi_working_share`, `latency_ms_median` or
+  `cell_level_0_4_median`; null values are grey
 
 ## Decisions
 
