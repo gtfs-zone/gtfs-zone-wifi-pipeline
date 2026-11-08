@@ -27,7 +27,13 @@ def test_measures():
     samples = [
         sample(),
         sample(wifi_rssi=-70, wifi_working=False),
-        sample(wifi_rssi=-80, wifi_working=None, cell_tech="nr", cell_dbm=-90),
+        sample(
+            wifi_rssi=-80,
+            wifi_working=None,
+            cell_tech="nr",
+            cell_dbm=-90,
+            cell_level=1,
+        ),
         sample(
             wifi_connected=False, wifi_working=False, wifi_rssi=None, cell_tech=None
         ),
@@ -46,9 +52,10 @@ def test_measures():
     assert m["latency_ms_median"] == 50.0
     assert m["captive_portal_tests"] == 1
     assert m["no_cell_samples"] == 1
+    assert m["cell_level_0_4_median"] == 3.0
     assert m["cell"] == {
         "lte": {"samples": 2, "level_dbm_median": -100.0, "level_0_4_median": 3.0},
-        "nr": {"samples": 1, "level_dbm_median": -90.0, "level_0_4_median": 3.0},
+        "nr": {"samples": 1, "level_dbm_median": -90.0, "level_0_4_median": 1.0},
     }
 
 

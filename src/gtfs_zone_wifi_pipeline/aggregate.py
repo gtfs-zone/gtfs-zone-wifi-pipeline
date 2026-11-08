@@ -60,6 +60,9 @@ def measures(samples: list[Sample], tests: list[NetTest]) -> dict[str, Any]:
         ),
         "captive_portal_tests": sum(t.captive_portal is True for t in tests),
         "no_cell_samples": sum(s.cell_tech is None for s in samples),
+        "cell_level_0_4_median": _median(
+            [s.cell_level for s in samples if s.cell_tech and s.cell_level is not None]
+        ),
         "cell": {
             tech: {
                 "samples": len(group),
