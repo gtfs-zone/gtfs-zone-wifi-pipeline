@@ -1,5 +1,6 @@
 """pipeline: the fixture sessions through every asset into a temp dir."""
 
+import gzip
 import json
 import shutil
 
@@ -59,6 +60,7 @@ def test_layout(published):
         "LICENSE",
         "bins.pmtiles",
         "index.json",
+        "probe/100k.bin",
         "routes/de-DELFI_de%3AVBB%3A11000000%7CR-Bahn%7CFEX%3A_100.json",
         "routes/de-DELFI_de%3AVBB%3A11000000%7CR-Bahn%7CRE2%3ADB_100.json",
         "stations.json",
@@ -74,6 +76,9 @@ def test_layout(published):
     stations = read(store, "stations.json")["stations"]
     assert stations[0]["name"] == "S+U Berlin Hauptbahnhof"
     assert "ODbL" in bytes(obstore.get(store, "LICENSE").bytes()).decode()
+    probe = bytes(obstore.get(store, "probe/100k.bin").bytes())
+    assert len(probe) == 100 * 1024
+    assert len(gzip.compress(probe)) > len(probe)
 
 
 def test_metadata(published):
@@ -115,7 +120,7 @@ def test_no_sessions_publishes_empty_files(buckets, recorder, monkeypatch):
     assert index["bin_count"] == 0
     assert read(store, "stations.json")["stations"] == []
     keys = sorted(m["path"] for batch in obstore.list(store) for m in batch)
-    assert keys == ["LICENSE", "index.json", "stations.json"]
+    assert keys == ["LICENSE", "index.json", "probe/100k.bin", "stations.json"]
 
 
 @pytest.mark.skipif(not HAVE_TIPPECANOE, reason="tippecanoe is not installed")

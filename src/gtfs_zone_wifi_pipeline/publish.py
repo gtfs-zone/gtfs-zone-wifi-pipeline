@@ -1,15 +1,16 @@
 """Writes the public artifacts to data.wifi.gtfs.zone.
 
 Layout (docs/overview.md): index.json, routes/<route_key>.json,
-stations.json, bins.pmtiles (left out when no bin is published) and
-LICENSE. index.json is written last, so its
-updated_at only moves once everything it lists is in place. Route files no
-longer listed are removed.
+stations.json, bins.pmtiles (left out when no bin is published), LICENSE
+and probe/100k.bin for the app's timed fetch. index.json is written last,
+so its updated_at only moves once everything it lists is in place. Route
+files no longer listed are removed.
 """
 
 from __future__ import annotations
 
 import contextlib
+import hashlib
 import json
 import subprocess
 import tempfile
@@ -51,6 +52,16 @@ _TYPES = {
     "": "text/plain; charset=utf-8",
 }
 CACHE_CONTROL = "public, max-age=300"
+PROBE_KEY = "probe/100k.bin"
+PROBE_BYTES = 100 * 1024
+
+
+def probe_bytes() -> bytes:
+    """Fixed incompressible bytes (SHA-256 in counter mode), so transfer
+    compression cannot shorten the app's timed fetch."""
+    count = PROBE_BYTES // 32
+    blocks = (hashlib.sha256(i.to_bytes(4, "big")).digest() for i in range(count))
+    return b"".join(blocks)[:PROBE_BYTES]
 
 
 def put(store: ObjectStore, key: str, data: bytes) -> None:
@@ -153,6 +164,7 @@ def publish(
         with contextlib.suppress(FileNotFoundError):
             obstore.delete(store, "bins.pmtiles")
     put(store, "LICENSE", LICENSE_TEXT.encode())
+    store_put(store, PROBE_KEY, probe_bytes(), "application/octet-stream", "no-store")
     index = {
         "updated_at": updated_at,
         "license": LICENSE_ID,

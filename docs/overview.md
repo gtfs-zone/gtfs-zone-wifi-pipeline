@@ -79,9 +79,15 @@ gtfs-zone-wifi-viz (viz.wifi.gtfs.zone)
   - wifi SSID, BSSID, RSSI, link speed
   - cell technology, operator, signal level
 - Active:
-  - reachability and captive portal checks
-  - latency
-  - a small (~100KB) timed fetch
+  - reachability and captive portal checks: plain HTTP `GET /generate_204`
+    on ingest, redirects not followed. A 204 is reachable; any other answer
+    is a captive portal (`reachable` false, `captive_portal` true); no answer
+    is unreachable with `captive_portal` null
+  - latency: the time to the 204 response
+  - a small timed fetch of `probe/100k.bin` from the public bucket, only
+    when reachable
+  - each test runs over the connected wifi when there is one, else over
+    cell, and records that transport
 - No full speed tests in v1. Open-RMBT is the upgrade path.
 - Rates: one passive sample every 10 s while a trip or station session is
   active, and one network test every 60 s.
@@ -206,6 +212,8 @@ All under the root of `data.wifi.gtfs.zone`, ODbL-1.0:
   wifi results.
 - `bins.pmtiles`: bin geometries with the same values, for the map.
 - `LICENSE`: the ODbL notice and attribution.
+- `probe/100k.bin`: 100 KiB of fixed incompressible bytes for the app's
+  timed fetch, served with `Cache-Control: no-store`. Not data.
 
 `route_key` is `<feed>_<gtfs route_id>`, made URL-safe: characters outside
 `[A-Za-z0-9._-]` are percent-encoded. That is the Transitous `routeId`
