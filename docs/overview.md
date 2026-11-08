@@ -215,8 +215,9 @@ Field details:
 - A bin's values (in route files, `bins.pmtiles` and per station):
   `session_count`, `samples`, `wifi_connected_share`, `wifi_working_share`,
   `wifi_rssi_median`, `net_tests`, `net_test_success_rate`,
-  `latency_ms_median`, `captive_portal_tests`, `no_cell_samples`, `cell`
-  (per technology: `samples`, `level_dbm_median`, `level_0_4_median`) and,
+  `latency_ms_median`, `captive_portal_tests`, `no_cell_samples`,
+  `cell_level_0_4_median` (over every technology), `cell` (per technology:
+  `samples`, `level_dbm_median`, `level_0_4_median`) and,
   for trips, `reports` (per field, sessions per answer). Route bins add
   `bin_id`, `from_m` and `to_m`; route files add `stops[]` (`stop_id`,
   `name`, `m`) and `length_m`.
