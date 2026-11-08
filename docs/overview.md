@@ -143,6 +143,36 @@ gtfs-zone-wifi-viz (viz.wifi.gtfs.zone)
   configurable.
 - H3 and raster aggregates are out of scope until after the field test.
 
+### Pipeline rules
+
+- Trip shapes come from Transitous `/api/v6/trip` once per trip id and are
+  cached in `wifi-raw` under `cache/trips/<url-safe trip id>.json`, since
+  Transitous only serves the current timetable. A trip that cannot be
+  fetched is reported and retried on the next run; its sessions wait.
+- Skeleton: the raster is built only in tiles the shapes pass (384 px plus
+  a 96 px border), so long lines fit in memory and the result matches one
+  global raster. Shapes within ~1 km of each other share one skeleton and
+  one azimuthal equidistant frame (WGS84); far regions get their own.
+- Bins: each skeleton edge is cut into round(length / 500 m) equal bins,
+  at least one. Bin ids are `<cluster>.<edge>.<k>` and change when the
+  skeleton is rebuilt from a different set of trips.
+- Snapping: a sample more than 200 m from its trip shape is dropped, as is
+  one more than 50 m before the boarding stop or past the alighting stop
+  along the shape. A network test takes the bin of the sample nearest in
+  time (within 30 s), if that sample was kept.
+- Working wifi: a sample with no connected wifi is not working; a connected
+  one is working when the wifi network test nearest in time (within 90 s)
+  was reachable with no captive portal, and unknown with no such test.
+  `wifi_working_share` counts known samples only; `wifi_connected_share`
+  counts all.
+- Report counts per bin count the sessions with samples in that bin.
+- A route's bins are ordered along its longest trip shape, and its stops
+  are placed along the same shape.
+- Each bin in `bins.pmtiles` is aggregated over every route that passes it,
+  with the route keys in its `routes` property.
+- Raw sessions that fail validation are listed in the run's metadata,
+  never deleted.
+
 ### Distribution
 
 - Field test: debug APK installed by sideload.
@@ -173,7 +203,29 @@ All under the root of `data.wifi.gtfs.zone`, ODbL-1.0:
 - `LICENSE`: the ODbL notice and attribution.
 
 `route_key` is `<feed>_<gtfs route_id>`, made URL-safe: characters outside
-`[A-Za-z0-9._-]` are percent-encoded.
+`[A-Za-z0-9._-]` are percent-encoded. That is the Transitous `routeId`
+encoded. The `%` is part of the object key, so a client fetching
+`routes/<route_key>.json` encodes it again (`%3A` becomes `%253A`).
+
+Field details:
+
+- `index.json`: `updated_at`, `license`, `attribution`, `routes[]`
+  (`route_key`, `name`, `mode`, `agency`, `feed`, `session_count`,
+  `bin_count`), `station_count` and `bin_count`. It is written last.
+- A bin's values (in route files, `bins.pmtiles` and per station):
+  `session_count`, `samples`, `wifi_connected_share`, `wifi_working_share`,
+  `wifi_rssi_median`, `net_tests`, `net_test_success_rate`,
+  `latency_ms_median`, `captive_portal_tests`, `no_cell_samples`, `cell`
+  (per technology: `samples`, `level_dbm_median`, `level_0_4_median`) and,
+  for trips, `reports` (per field, sessions per answer). Route bins add
+  `bin_id`, `from_m` and `to_m`; route files add `stops[]` (`stop_id`,
+  `name`, `m`) and `length_m`.
+- `stations.json`: per station `station_key` (Transitous parent id, else
+  stop id), name, position, `session_count`, `checklist` (per item `yes`
+  and `no` counts) and the values above.
+- `bins.pmtiles`: layer `bins`, zooms 0 to 14, flat properties with `cell`
+  and `reports` as JSON strings. It is left out when no bin is published
+  (`bin_count` 0).
 
 Third-party layers (such as Ookla open data) are published under their own
 prefix with their own license file and never merged into these files.
