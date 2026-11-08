@@ -1,0 +1,1023 @@
+{
+  "schema_version": 1,
+  "session_id": "3f1c2a9e-6b7d-4e2f-9a1b-8c5d4e3f2a1b",
+  "app_version": "0.1.0",
+  "kind": "trip",
+  "started_at": "2026-11-08T13:19:00Z",
+  "ended_at": "2026-11-08T13:26:00Z",
+  "trip": {
+    "transitous_trip_id": "20261108_14:19_de-DELFI_3468911239",
+    "transitous_route_id": "de-DELFI_de:VBB:11000000|R-Bahn|FEX:_100",
+    "transitous_source": "de_DELFI.gtfs.zip/stop_times.txt:43735665:43735668",
+    "gtfs": {
+      "feed": "de-DELFI",
+      "trip_id": "3468911239",
+      "route_id": "de:VBB:11000000|R-Bahn|FEX:_100",
+      "agency_id": "10434",
+      "service_date": "20261108"
+    },
+    "route_name": "FEX",
+    "route_type": 100,
+    "mode": "REGIONAL_RAIL",
+    "agency_name": "DB Regio AG Nordost",
+    "headsign": "Flughafen BER",
+    "trip_short_name": "021889",
+    "boarding": {
+      "transitous_stop_id": "de-DELFI_de:11000:900003200:1:50",
+      "transitous_parent_id": "de-DELFI_de:11000:900003201",
+      "gtfs_stop_id": "de:11000:900003200:1:50",
+      "name": "S+U Berlin Hauptbahnhof",
+      "lat": 52.52496,
+      "lon": 13.368911,
+      "scheduled_time": "2026-11-08T13:19:00Z"
+    },
+    "alighting": {
+      "transitous_stop_id": "de-DELFI_de:11000:900058101:2:52",
+      "transitous_parent_id": "de-DELFI_de:11000:900058101",
+      "gtfs_stop_id": "de:11000:900058101:2:52",
+      "name": "S S\u00fcdkreuz Bhf (Berlin)",
+      "lat": 52.475925,
+      "lon": 13.365291,
+      "scheduled_time": "2026-11-08T13:26:00Z"
+    },
+    "car_number": "4",
+    "class": "2"
+  },
+  "samples": [
+    {
+      "t": "2026-11-08T13:19:00Z",
+      "lat": 52.524988,
+      "lon": 13.368879,
+      "acc": 8.0,
+      "speed": null,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -95,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:19:10Z",
+      "lat": 52.52382,
+      "lon": 13.369727,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -96,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:19:20Z",
+      "lat": 52.522771,
+      "lon": 13.370577,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -97,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:19:30Z",
+      "lat": 52.521734,
+      "lon": 13.371457,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -98,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:19:40Z",
+      "lat": 52.520541,
+      "lon": 13.372241,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -99,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:19:50Z",
+      "lat": 52.519435,
+      "lon": 13.372819,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -100,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:20:00Z",
+      "lat": 52.518235,
+      "lon": 13.373007,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -101,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:20:10Z",
+      "lat": 52.516994,
+      "lon": 13.37329,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -102,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:20:20Z",
+      "lat": 52.515884,
+      "lon": 13.373823,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -103,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:20:30Z",
+      "lat": 52.514692,
+      "lon": 13.374402,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -95,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:20:40Z",
+      "lat": 52.513522,
+      "lon": 13.374864,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -96,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:20:50Z",
+      "lat": 52.512399,
+      "lon": 13.37535,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -97,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:21:00Z",
+      "lat": 52.511136,
+      "lon": 13.375642,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -98,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:21:10Z",
+      "lat": 52.50996,
+      "lon": 13.375643,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -99,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:21:20Z",
+      "lat": 52.508776,
+      "lon": 13.375526,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -100,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:21:30Z",
+      "lat": 52.50752,
+      "lon": 13.375329,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -101,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:21:40Z",
+      "lat": 52.506416,
+      "lon": 13.374827,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -102,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:21:50Z",
+      "lat": 52.505268,
+      "lon": 13.374051,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -103,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:22:00Z",
+      "lat": 52.504079,
+      "lon": 13.373447,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -95,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:22:10Z",
+      "lat": 52.502961,
+      "lon": 13.373141,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -96,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:22:20Z",
+      "lat": 52.50172,
+      "lon": 13.372802,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -97,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:22:30Z",
+      "lat": 52.500526,
+      "lon": 13.37244,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -98,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:22:40Z",
+      "lat": 52.499369,
+      "lon": 13.372364,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -99,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:22:50Z",
+      "lat": 52.498099,
+      "lon": 13.372577,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -100,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:23:00Z",
+      "lat": 52.496937,
+      "lon": 13.372721,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -101,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:23:10Z",
+      "lat": 52.495743,
+      "lon": 13.372694,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -102,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:23:20Z",
+      "lat": 52.49448,
+      "lon": 13.372699,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -103,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:23:30Z",
+      "lat": 52.493335,
+      "lon": 13.372671,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -95,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:23:40Z",
+      "lat": 52.492102,
+      "lon": 13.37252,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -96,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:23:50Z",
+      "lat": 52.490868,
+      "lon": 13.372425,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -97,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:24:00Z",
+      "lat": 52.489725,
+      "lon": 13.372416,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -98,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:24:10Z",
+      "lat": 52.488467,
+      "lon": 13.372211,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -99,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:24:20Z",
+      "lat": 52.487289,
+      "lon": 13.371799,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -100,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:24:30Z",
+      "lat": 52.486146,
+      "lon": 13.371421,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -101,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:24:40Z",
+      "lat": 52.484914,
+      "lon": 13.370992,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -102,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:24:50Z",
+      "lat": 52.483809,
+      "lon": 13.370354,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -103,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:25:00Z",
+      "lat": 52.482673,
+      "lon": 13.36962,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -95,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:25:10Z",
+      "lat": 52.481494,
+      "lon": 13.368976,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -96,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:25:20Z",
+      "lat": 52.480452,
+      "lon": 13.368236,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -97,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:25:30Z",
+      "lat": 52.479313,
+      "lon": 13.367351,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -98,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:25:40Z",
+      "lat": 52.478176,
+      "lon": 13.366575,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -56,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -99,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:25:50Z",
+      "lat": 52.477101,
+      "lon": 13.365977,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -57,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -100,
+        "level_0_4": 3
+      }
+    },
+    {
+      "t": "2026-11-08T13:26:00Z",
+      "lat": 52.475904,
+      "lon": 13.365314,
+      "acc": 8.0,
+      "speed": 13.4,
+      "wifi": {
+        "ssid": "WIFIonICE",
+        "bssid": "02:1a:2b:3c:4d:5e",
+        "rssi": -55,
+        "link_mbps": 144,
+        "frequency": 5180
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "01",
+        "level_dbm": -101,
+        "level_0_4": 3
+      }
+    }
+  ],
+  "net_tests": [
+    {
+      "t": "2026-11-08T13:19:05Z",
+      "transport": "wifi",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 48.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 820.0
+    },
+    {
+      "t": "2026-11-08T13:20:05Z",
+      "transport": "wifi",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 55.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 915.0
+    },
+    {
+      "t": "2026-11-08T13:21:05Z",
+      "transport": "wifi",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 62.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 1010.0
+    },
+    {
+      "t": "2026-11-08T13:22:05Z",
+      "transport": "wifi",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 48.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 1105.0
+    },
+    {
+      "t": "2026-11-08T13:23:05Z",
+      "transport": "wifi",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 55.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 820.0
+    },
+    {
+      "t": "2026-11-08T13:24:05Z",
+      "transport": "wifi",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 62.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 915.0
+    },
+    {
+      "t": "2026-11-08T13:25:05Z",
+      "transport": "wifi",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 48.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 1010.0
+    }
+  ],
+  "reports": {
+    "outlets": "working",
+    "wifi": "works",
+    "portal": "click",
+    "data_cap": false,
+    "vpn_blocked": false
+  }
+}

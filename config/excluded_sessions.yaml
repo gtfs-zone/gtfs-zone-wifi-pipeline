@@ -1,0 +1,5 @@
+# Sessions left out of every aggregate. Raw objects stay in the bucket.
+# Each entry: the session_id and why it was excluded, e.g.
+#   - id: 3f1c2a9e-6b7d-4e2f-9a1b-8c5d4e3f2a1b
+#     reason: GPS trace jumps between two lines
+excluded: []
