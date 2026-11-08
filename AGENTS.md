@@ -20,6 +20,8 @@ JSON and PMTiles for gtfs-zone-wifi-viz.
   Co-Authored-By trailers. Setup is in [CONTRIBUTING.md](CONTRIBUTING.md).
 - **Cross-repo work**: sibling gtfs.zone repos live under the same parent
   directory and may be read and edited when a change spans repos.
-- **Plans**: the cross-repo plan is `docs/overview.md`. A local
-  `CURRENT_PLAN.md` here is neither tracked nor gitignored: never stage or
-  commit it.
+- **Plans**: write plans to `CURRENT_PLAN.md` at the repo root as a
+  checklist (`- [ ]`), ticked off as work lands. It is neither tracked nor
+  gitignored: never stage or commit it. This repo's plan is the central plan
+  for every wifi.gtfs.zone repo, split into phases; "do phase N" follows its
+  "How to run a phase" section.
