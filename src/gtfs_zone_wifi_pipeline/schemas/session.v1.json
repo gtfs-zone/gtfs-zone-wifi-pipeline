@@ -1,0 +1,661 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gtfs-zone/gtfs-zone-wifi-ingest/blob/main/schemas/session.v1.json",
+  "title": "wifi.gtfs.zone session v1",
+  "description": "One anonymous trip or station session uploaded by gtfs-zone-wifi-app. Nothing in it links one session to another or to a device.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "app_version",
+    "kind",
+    "started_at",
+    "ended_at",
+    "samples",
+    "net_tests"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "session_id": {
+      "description": "Random UUIDv4, generated per session.",
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "app_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "kind": {
+      "enum": [
+        "trip",
+        "station"
+      ]
+    },
+    "started_at": {
+      "$ref": "#/$defs/timestamp"
+    },
+    "ended_at": {
+      "$ref": "#/$defs/timestamp"
+    },
+    "trip": {
+      "$ref": "#/$defs/trip"
+    },
+    "station": {
+      "$ref": "#/$defs/place"
+    },
+    "samples": {
+      "type": "array",
+      "maxItems": 20000,
+      "items": {
+        "$ref": "#/$defs/sample"
+      }
+    },
+    "net_tests": {
+      "type": "array",
+      "maxItems": 5000,
+      "items": {
+        "$ref": "#/$defs/net_test"
+      }
+    },
+    "reports": {
+      "$ref": "#/$defs/reports"
+    },
+    "station_checklist": {
+      "$ref": "#/$defs/station_checklist"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "trip"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "trip"
+        ],
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "station"
+              ]
+            },
+            {
+              "required": [
+                "station_checklist"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "station"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "station",
+          "station_checklist"
+        ],
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "trip"
+              ]
+            },
+            {
+              "required": [
+                "reports"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "timestamp": {
+      "description": "RFC 3339 UTC timestamp.",
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,6})?Z$"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "nullable_id": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "place_fields": {
+      "description": "A stop as returned by Transitous, plus the GTFS ids derived from it.",
+      "type": "object",
+      "required": [
+        "transitous_stop_id",
+        "name",
+        "lat",
+        "lon"
+      ],
+      "properties": {
+        "transitous_stop_id": {
+          "description": "Transitous stopId, <feed>_<gtfs stop_id>.",
+          "$ref": "#/$defs/id"
+        },
+        "transitous_parent_id": {
+          "$ref": "#/$defs/nullable_id"
+        },
+        "gtfs_stop_id": {
+          "$ref": "#/$defs/nullable_id"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 256
+        },
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "lon": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      }
+    },
+    "place": {
+      "$ref": "#/$defs/place_fields",
+      "unevaluatedProperties": false
+    },
+    "trip_stop": {
+      "$ref": "#/$defs/place_fields",
+      "required": [
+        "scheduled_time"
+      ],
+      "properties": {
+        "scheduled_time": {
+          "description": "Scheduled departure at boarding, scheduled arrival at alighting.",
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "trip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "transitous_trip_id",
+        "transitous_route_id",
+        "route_name",
+        "boarding",
+        "alighting"
+      ],
+      "properties": {
+        "transitous_trip_id": {
+          "description": "Transitous tripId, <yyyymmdd>_<HH:MM>_<feed>_<gtfs trip_id>.",
+          "$ref": "#/$defs/id"
+        },
+        "transitous_route_id": {
+          "description": "Transitous routeId, <feed>_<gtfs route_id>.",
+          "$ref": "#/$defs/id"
+        },
+        "transitous_source": {
+          "description": "Transitous source field, e.g. de_DELFI.gtfs.zip/stop_times.txt:1:2.",
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 512
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "gtfs": {
+          "$ref": "#/$defs/gtfs_ids"
+        },
+        "route_name": {
+          "type": "string",
+          "maxLength": 256
+        },
+        "route_type": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "mode": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 64
+        },
+        "agency_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 256
+        },
+        "headsign": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 256
+        },
+        "trip_short_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 64
+        },
+        "boarding": {
+          "$ref": "#/$defs/trip_stop"
+        },
+        "alighting": {
+          "$ref": "#/$defs/trip_stop"
+        },
+        "car_number": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 32
+        },
+        "class": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 32
+        }
+      }
+    },
+    "gtfs_ids": {
+      "description": "GTFS ids derived from the Transitous ids. Any field may be null when it cannot be derived.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "feed": {
+          "$ref": "#/$defs/nullable_id"
+        },
+        "trip_id": {
+          "$ref": "#/$defs/nullable_id"
+        },
+        "route_id": {
+          "$ref": "#/$defs/nullable_id"
+        },
+        "agency_id": {
+          "$ref": "#/$defs/nullable_id"
+        },
+        "service_date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{8}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "sample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "t",
+        "lat",
+        "lon",
+        "acc",
+        "speed",
+        "wifi",
+        "cell"
+      ],
+      "properties": {
+        "t": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "lon": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "acc": {
+          "description": "Horizontal accuracy, m.",
+          "type": "number",
+          "minimum": 0
+        },
+        "speed": {
+          "description": "m/s.",
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "wifi": {
+          "description": "Connected wifi network, null when not connected.",
+          "anyOf": [
+            {
+              "$ref": "#/$defs/wifi"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cell": {
+          "description": "Serving cell, null when none.",
+          "anyOf": [
+            {
+              "$ref": "#/$defs/cell"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "wifi": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ssid",
+        "bssid",
+        "rssi",
+        "link_mbps",
+        "frequency"
+      ],
+      "properties": {
+        "ssid": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 32
+        },
+        "bssid": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{2}(:[0-9a-f]{2}){5}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rssi": {
+          "description": "dBm.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": -127,
+          "maximum": 0
+        },
+        "link_mbps": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "frequency": {
+          "description": "MHz.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tech",
+        "mcc",
+        "mnc",
+        "level_dbm",
+        "level_0_4"
+      ],
+      "properties": {
+        "tech": {
+          "enum": [
+            "gsm",
+            "cdma",
+            "wcdma",
+            "tdscdma",
+            "lte",
+            "nr"
+          ]
+        },
+        "mcc": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{3}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mnc": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{2,3}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "level_dbm": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": -160,
+          "maximum": 0
+        },
+        "level_0_4": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 4
+        }
+      }
+    },
+    "net_test": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "t",
+        "transport",
+        "reachable",
+        "captive_portal",
+        "latency_ms",
+        "fetch_bytes",
+        "fetch_ms"
+      ],
+      "properties": {
+        "t": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "transport": {
+          "enum": [
+            "wifi",
+            "cell"
+          ]
+        },
+        "reachable": {
+          "type": "boolean"
+        },
+        "captive_portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "latency_ms": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "fetch_bytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "fetch_ms": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "reports": {
+      "description": "Rider reports for a trip. Null means not answered.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "outlets": {
+          "enum": [
+            "none",
+            "present",
+            "working",
+            null
+          ]
+        },
+        "wifi": {
+          "enum": [
+            "absent",
+            "broken",
+            "works",
+            null
+          ]
+        },
+        "portal": {
+          "enum": [
+            "none",
+            "click",
+            "email",
+            "account",
+            "sms",
+            "password",
+            "paid",
+            null
+          ]
+        },
+        "data_cap": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "vpn_blocked": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "station_checklist": {
+      "description": "What the station wifi needed. Null means not answered.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "needed_email": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "needed_account": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "needed_sms": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "needed_checkbox": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "needed_password": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "needed_payment": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "could_not_connect": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

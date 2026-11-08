@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "session_id": "c2d3e4f5-a6b7-4c8d-9e0f-1a2b3c4d5e6f",
+  "app_version": "0.1.0",
+  "kind": "station",
+  "started_at": "2026-11-08T17:30:00Z",
+  "ended_at": "2026-11-08T17:31:30Z",
+  "station": {
+    "transitous_stop_id": "de-DELFI_de:11000:900003201",
+    "transitous_parent_id": null,
+    "gtfs_stop_id": "de:11000:900003201",
+    "name": "S+U Berlin Hauptbahnhof",
+    "lat": 52.52492,
+    "lon": 13.36908
+  },
+  "samples": [
+    {
+      "t": "2026-11-08T17:30:00Z",
+      "lat": 52.5249,
+      "lon": 13.369,
+      "acc": 20.0,
+      "speed": 0.0,
+      "wifi": {
+        "ssid": "BahnhofsWLAN",
+        "bssid": "0a:11:22:33:44:55",
+        "rssi": -62,
+        "link_mbps": 72,
+        "frequency": 2412
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "03",
+        "level_dbm": -88,
+        "level_0_4": 4
+      }
+    },
+    {
+      "t": "2026-11-08T17:30:30Z",
+      "lat": 52.524933,
+      "lon": 13.368933,
+      "acc": 20.0,
+      "speed": 0.0,
+      "wifi": {
+        "ssid": "BahnhofsWLAN",
+        "bssid": "0a:11:22:33:44:55",
+        "rssi": -62,
+        "link_mbps": 72,
+        "frequency": 2412
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "03",
+        "level_dbm": -88,
+        "level_0_4": 4
+      }
+    },
+    {
+      "t": "2026-11-08T17:31:00Z",
+      "lat": 52.524967,
+      "lon": 13.368867,
+      "acc": 20.0,
+      "speed": 0.0,
+      "wifi": {
+        "ssid": "BahnhofsWLAN",
+        "bssid": "0a:11:22:33:44:55",
+        "rssi": -62,
+        "link_mbps": 72,
+        "frequency": 2412
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "03",
+        "level_dbm": -88,
+        "level_0_4": 4
+      }
+    },
+    {
+      "t": "2026-11-08T17:31:30Z",
+      "lat": 52.525,
+      "lon": 13.3688,
+      "acc": 20.0,
+      "speed": 0.0,
+      "wifi": {
+        "ssid": "BahnhofsWLAN",
+        "bssid": "0a:11:22:33:44:55",
+        "rssi": -62,
+        "link_mbps": 72,
+        "frequency": 2412
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "03",
+        "level_dbm": -88,
+        "level_0_4": 4
+      }
+    }
+  ],
+  "net_tests": [
+    {
+      "t": "2026-11-08T17:30:10Z",
+      "transport": "wifi",
+      "reachable": false,
+      "captive_portal": true,
+      "latency_ms": null,
+      "fetch_bytes": null,
+      "fetch_ms": null
+    },
+    {
+      "t": "2026-11-08T17:31:10Z",
+      "transport": "wifi",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 35.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 410.0
+    }
+  ],
+  "station_checklist": {
+    "needed_email": false,
+    "needed_account": false,
+    "needed_sms": false,
+    "needed_checkbox": true,
+    "needed_password": false,
+    "needed_payment": false,
+    "could_not_connect": false
+  }
+}

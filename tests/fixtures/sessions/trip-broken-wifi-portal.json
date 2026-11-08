@@ -1,0 +1,1503 @@
+{
+  "schema_version": 1,
+  "session_id": "a7e4b0c2-1d3f-4a5b-b6c7-d8e9f0a1b2c3",
+  "app_version": "0.1.0",
+  "kind": "trip",
+  "started_at": "2026-11-08T15:06:00Z",
+  "ended_at": "2026-11-08T15:19:00Z",
+  "trip": {
+    "transitous_trip_id": "20261108_15:39_de-DELFI_3468911949",
+    "transitous_route_id": "de-DELFI_de:VBB:11000000|R-Bahn|RE2:DB_100",
+    "transitous_source": "de_DELFI.gtfs.zip/stop_times.txt:43666575:43666592",
+    "gtfs": {
+      "feed": "de-DELFI",
+      "trip_id": "3468911949",
+      "route_id": "de:VBB:11000000|R-Bahn|RE2:DB_100",
+      "agency_id": "10434",
+      "service_date": "20261108"
+    },
+    "route_name": "RE2",
+    "route_type": 100,
+    "mode": "REGIONAL_RAIL",
+    "agency_name": "DB Regio AG Nordost",
+    "headsign": "Cottbus, Hauptbahnhof",
+    "trip_short_name": "003124",
+    "boarding": {
+      "transitous_stop_id": "de-DELFI_de:11000:900029101:3:54",
+      "transitous_parent_id": "de-DELFI_de:11000:900029101",
+      "gtfs_stop_id": "de:11000:900029101:3:54",
+      "name": "S Spandau Bhf (Berlin)",
+      "lat": 52.534542,
+      "lon": 13.197124,
+      "scheduled_time": "2026-11-08T15:06:00Z"
+    },
+    "alighting": {
+      "transitous_stop_id": "de-DELFI_de:11000:900007102:5:59",
+      "transitous_parent_id": "de-DELFI_de:11000:900007102",
+      "gtfs_stop_id": "de:11000:900007102:5:59",
+      "name": "S+U Gesundbrunnen Bhf (Berlin)",
+      "lat": 52.548386,
+      "lon": 13.390704,
+      "scheduled_time": "2026-11-08T15:19:00Z"
+    },
+    "car_number": null,
+    "class": null
+  },
+  "samples": [
+    {
+      "t": "2026-11-08T15:06:00Z",
+      "lat": 52.534586,
+      "lon": 13.197128,
+      "acc": 8.0,
+      "speed": null,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -78,
+        "link_mbps": null,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -110,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:06:10Z",
+      "lat": 52.534087,
+      "lon": 13.199684,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -79,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:06:20Z",
+      "lat": 52.533472,
+      "lon": 13.20199,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -80,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -112,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:06:30Z",
+      "lat": 52.53278,
+      "lon": 13.204261,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -81,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -113,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:06:40Z",
+      "lat": 52.532102,
+      "lon": 13.20674,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -82,
+        "link_mbps": null,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:06:50Z",
+      "lat": 52.531753,
+      "lon": 13.209272,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -78,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -115,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:07:00Z",
+      "lat": 52.531422,
+      "lon": 13.211729,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -79,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": null
+    },
+    {
+      "t": "2026-11-08T15:07:10Z",
+      "lat": 52.531053,
+      "lon": 13.214281,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -80,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -117,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:07:20Z",
+      "lat": 52.530794,
+      "lon": 13.216914,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -81,
+        "link_mbps": null,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -110,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:07:30Z",
+      "lat": 52.530416,
+      "lon": 13.219429,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -82,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:07:40Z",
+      "lat": 52.530075,
+      "lon": 13.221892,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -78,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -112,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:07:50Z",
+      "lat": 52.529821,
+      "lon": 13.224492,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -79,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -113,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:08:00Z",
+      "lat": 52.529493,
+      "lon": 13.227125,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -80,
+        "link_mbps": null,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:08:10Z",
+      "lat": 52.529258,
+      "lon": 13.229624,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -81,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -115,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:08:20Z",
+      "lat": 52.528984,
+      "lon": 13.232128,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -82,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -116,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:08:30Z",
+      "lat": 52.528609,
+      "lon": 13.234755,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -78,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -117,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:08:40Z",
+      "lat": 52.528094,
+      "lon": 13.237204,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -79,
+        "link_mbps": null,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -110,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:08:50Z",
+      "lat": 52.527347,
+      "lon": 13.239424,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -80,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:09:00Z",
+      "lat": 52.526732,
+      "lon": 13.241832,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -81,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -112,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:09:10Z",
+      "lat": 52.52654,
+      "lon": 13.244483,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -82,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": null
+    },
+    {
+      "t": "2026-11-08T15:09:20Z",
+      "lat": 52.526476,
+      "lon": 13.24707,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -78,
+        "link_mbps": null,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:09:30Z",
+      "lat": 52.526532,
+      "lon": 13.249584,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -79,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -115,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:09:40Z",
+      "lat": 52.526735,
+      "lon": 13.252209,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -80,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -116,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:09:50Z",
+      "lat": 52.526835,
+      "lon": 13.254872,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -81,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -117,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:10:00Z",
+      "lat": 52.527039,
+      "lon": 13.257404,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -82,
+        "link_mbps": null,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -110,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:10:10Z",
+      "lat": 52.527214,
+      "lon": 13.259931,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -78,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:10:20Z",
+      "lat": 52.527324,
+      "lon": 13.26259,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -79,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -112,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:10:30Z",
+      "lat": 52.527558,
+      "lon": 13.265219,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -80,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -113,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:10:40Z",
+      "lat": 52.527685,
+      "lon": 13.267725,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -81,
+        "link_mbps": null,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:10:50Z",
+      "lat": 52.527804,
+      "lon": 13.270294,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": {
+        "ssid": "Bahn-Free",
+        "bssid": "06:aa:bb:cc:dd:01",
+        "rssi": -82,
+        "link_mbps": 6,
+        "frequency": 2437
+      },
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -115,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:11:00Z",
+      "lat": 52.528015,
+      "lon": 13.272973,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -116,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:11:10Z",
+      "lat": 52.528117,
+      "lon": 13.27556,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -117,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:11:20Z",
+      "lat": 52.528283,
+      "lon": 13.278061,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": null
+    },
+    {
+      "t": "2026-11-08T15:11:30Z",
+      "lat": 52.528488,
+      "lon": 13.280673,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:11:40Z",
+      "lat": 52.528589,
+      "lon": 13.283342,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -112,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:11:50Z",
+      "lat": 52.528802,
+      "lon": 13.285884,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -113,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:12:00Z",
+      "lat": 52.52897,
+      "lon": 13.288401,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:12:10Z",
+      "lat": 52.529106,
+      "lon": 13.291047,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -115,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:12:20Z",
+      "lat": 52.529459,
+      "lon": 13.293659,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -116,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:12:30Z",
+      "lat": 52.529759,
+      "lon": 13.296124,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -117,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:12:40Z",
+      "lat": 52.533578,
+      "lon": 13.297413,
+      "acc": 150.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -110,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:12:50Z",
+      "lat": 52.53046,
+      "lon": 13.301264,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:13:00Z",
+      "lat": 52.530752,
+      "lon": 13.303812,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -112,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:13:10Z",
+      "lat": 52.531129,
+      "lon": 13.306259,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -113,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:13:20Z",
+      "lat": 52.5315,
+      "lon": 13.30881,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:13:30Z",
+      "lat": 52.531774,
+      "lon": 13.311438,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": null
+    },
+    {
+      "t": "2026-11-08T15:13:40Z",
+      "lat": 52.53217,
+      "lon": 13.313945,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -116,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:13:50Z",
+      "lat": 52.532509,
+      "lon": 13.316405,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -117,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:14:00Z",
+      "lat": 52.532807,
+      "lon": 13.318999,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -110,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:14:10Z",
+      "lat": 52.533198,
+      "lon": 13.321608,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:14:20Z",
+      "lat": 52.533429,
+      "lon": 13.324099,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -112,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:14:30Z",
+      "lat": 52.533748,
+      "lon": 13.326599,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -113,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:14:40Z",
+      "lat": 52.534144,
+      "lon": 13.329219,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:14:50Z",
+      "lat": 52.5344,
+      "lon": 13.331792,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -115,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:15:00Z",
+      "lat": 52.534754,
+      "lon": 13.334252,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -116,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:15:10Z",
+      "lat": 52.535084,
+      "lon": 13.3368,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -117,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:15:20Z",
+      "lat": 52.535334,
+      "lon": 13.33944,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -110,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:15:30Z",
+      "lat": 52.535679,
+      "lon": 13.341978,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:15:40Z",
+      "lat": 52.535877,
+      "lon": 13.344471,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": null
+    },
+    {
+      "t": "2026-11-08T15:15:50Z",
+      "lat": 52.536108,
+      "lon": 13.347074,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -113,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:16:00Z",
+      "lat": 52.53675,
+      "lon": 13.349566,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:16:10Z",
+      "lat": 52.537063,
+      "lon": 13.352031,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -115,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:16:20Z",
+      "lat": 52.537337,
+      "lon": 13.354533,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -116,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:16:30Z",
+      "lat": 52.538171,
+      "lon": 13.356845,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -117,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:16:40Z",
+      "lat": 52.539039,
+      "lon": 13.358983,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -110,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:16:50Z",
+      "lat": 52.540007,
+      "lon": 13.361005,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:17:00Z",
+      "lat": 52.54094,
+      "lon": 13.3631,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -112,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:17:10Z",
+      "lat": 52.541837,
+      "lon": 13.365265,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -113,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:17:20Z",
+      "lat": 52.542834,
+      "lon": 13.367356,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:17:30Z",
+      "lat": 52.543737,
+      "lon": 13.369369,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -115,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:17:40Z",
+      "lat": 52.54464,
+      "lon": 13.371505,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -116,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:17:50Z",
+      "lat": 52.545613,
+      "lon": 13.373709,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": null
+    },
+    {
+      "t": "2026-11-08T15:18:00Z",
+      "lat": 52.54646,
+      "lon": 13.375792,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -110,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:18:10Z",
+      "lat": 52.547333,
+      "lon": 13.377909,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -111,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:18:20Z",
+      "lat": 52.547961,
+      "lon": 13.380386,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -112,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:18:30Z",
+      "lat": 52.548225,
+      "lon": 13.382971,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -113,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:18:40Z",
+      "lat": 52.548322,
+      "lon": 13.38549,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -114,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:18:50Z",
+      "lat": 52.548271,
+      "lon": 13.388062,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "nr",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -115,
+        "level_0_4": 1
+      }
+    },
+    {
+      "t": "2026-11-08T15:19:00Z",
+      "lat": 52.548329,
+      "lon": 13.390744,
+      "acc": 8.0,
+      "speed": 17.6,
+      "wifi": null,
+      "cell": {
+        "tech": "lte",
+        "mcc": "262",
+        "mnc": "02",
+        "level_dbm": -116,
+        "level_0_4": 1
+      }
+    }
+  ],
+  "net_tests": [
+    {
+      "t": "2026-11-08T15:06:05Z",
+      "transport": "wifi",
+      "reachable": false,
+      "captive_portal": true,
+      "latency_ms": null,
+      "fetch_bytes": null,
+      "fetch_ms": null
+    },
+    {
+      "t": "2026-11-08T15:07:05Z",
+      "transport": "wifi",
+      "reachable": false,
+      "captive_portal": true,
+      "latency_ms": null,
+      "fetch_bytes": null,
+      "fetch_ms": null
+    },
+    {
+      "t": "2026-11-08T15:08:05Z",
+      "transport": "wifi",
+      "reachable": false,
+      "captive_portal": true,
+      "latency_ms": null,
+      "fetch_bytes": null,
+      "fetch_ms": null
+    },
+    {
+      "t": "2026-11-08T15:09:05Z",
+      "transport": "wifi",
+      "reachable": false,
+      "captive_portal": true,
+      "latency_ms": null,
+      "fetch_bytes": null,
+      "fetch_ms": null
+    },
+    {
+      "t": "2026-11-08T15:10:05Z",
+      "transport": "wifi",
+      "reachable": false,
+      "captive_portal": true,
+      "latency_ms": null,
+      "fetch_bytes": null,
+      "fetch_ms": null
+    },
+    {
+      "t": "2026-11-08T15:11:05Z",
+      "transport": "cell",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 202.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 3100.0
+    },
+    {
+      "t": "2026-11-08T15:12:05Z",
+      "transport": "cell",
+      "reachable": false,
+      "captive_portal": null,
+      "latency_ms": null,
+      "fetch_bytes": null,
+      "fetch_ms": null
+    },
+    {
+      "t": "2026-11-08T15:13:05Z",
+      "transport": "cell",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 172.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 2700.0
+    },
+    {
+      "t": "2026-11-08T15:14:05Z",
+      "transport": "cell",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 202.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 3100.0
+    },
+    {
+      "t": "2026-11-08T15:15:05Z",
+      "transport": "cell",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 142.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 2300.0
+    },
+    {
+      "t": "2026-11-08T15:16:05Z",
+      "transport": "cell",
+      "reachable": false,
+      "captive_portal": null,
+      "latency_ms": null,
+      "fetch_bytes": null,
+      "fetch_ms": null
+    },
+    {
+      "t": "2026-11-08T15:17:05Z",
+      "transport": "cell",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 202.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 3100.0
+    },
+    {
+      "t": "2026-11-08T15:18:05Z",
+      "transport": "cell",
+      "reachable": true,
+      "captive_portal": false,
+      "latency_ms": 142.0,
+      "fetch_bytes": 102400,
+      "fetch_ms": 2300.0
+    }
+  ],
+  "reports": {
+    "outlets": "none",
+    "wifi": "broken",
+    "portal": "email",
+    "data_cap": null,
+    "vpn_blocked": true
+  }
+}
