@@ -60,6 +60,12 @@ gtfs-zone-wifi-viz (viz.wifi.gtfs.zone)
   stations before upload.
 - Every raw session is kept, so aggregation can change later. Outliers and
   abuse are trimmed by hand.
+- Raw layout in `wifi-raw`: `raw/v<schema_version>/<yyyy>/<mm>/<dd>/<session_id>.json`,
+  dated by upload time (UTC), plus an `ids/<session_id>` marker holding the
+  raw key, which makes uploads idempotent across days. The pipeline reads
+  only `raw/`.
+- Ingest limits: 2 MB per upload (sent and decompressed), gzip accepted, 30
+  uploads per client IP per hour, held in memory.
 
 ### Measurements
 
