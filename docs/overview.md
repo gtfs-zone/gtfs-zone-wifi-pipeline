@@ -62,7 +62,14 @@ gtfs-zone-wifi-viz (viz.wifi.gtfs.zone)
   session UUID.
 - IP addresses are used for rate limiting and never stored.
 - The app trims each session to the trip (boarding to alighting stop) and
-  stations before upload.
+  stations before upload:
+  - trip: from the first sample within 300 m of the boarding stop to the
+    last within 300 m of the alighting stop, and only samples within 300 m
+    of the Transitous trip line between the two stops
+  - station: samples within 300 m of the stop
+  - network tests within 30 s of the kept samples; `started_at` and
+    `ended_at` are the first and last kept sample
+  - the untrimmed rows are deleted from the phone once the session is built
 - Every raw session is kept, so aggregation can change later. Outliers and
   abuse are trimmed by hand.
 - Raw layout in `wifi-raw`: `raw/v<schema_version>/<yyyy>/<mm>/<dd>/<session_id>.json`,
