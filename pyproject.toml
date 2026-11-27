@@ -5,7 +5,7 @@ requires-python = ">=3.13"
 description = "Dagster code location that turns raw wifi.gtfs.zone sessions into published aggregates"
 license = "AGPL-3.0-or-later"
 dependencies = [
-    "dagster==1.13.24",
+    "dagster==1.13.31",
     "dagster-postgres==0.29.24",
     "httpx>=0.28.1",
     "jsonschema>=4.26.0",
