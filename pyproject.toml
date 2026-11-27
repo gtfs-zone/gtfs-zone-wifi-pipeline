@@ -23,7 +23,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     "commitizen>=4.19.3",
-    "dagster-webserver==1.13.24",
+    "dagster-webserver==1.13.31",
     "deptry>=0.25.1",
     "pmtiles>=3.8.1",
     "pytest>=9.2.0",
